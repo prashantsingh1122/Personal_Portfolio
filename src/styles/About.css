@@ -1,0 +1,274 @@
+/* About Section Styling */
+.about {
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top: 9rem;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Animated underline effect for About heading */
+.about::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #6b46c1, #805ad5);
+  transition: all 0.5s ease;
+  transform: translateX(-50%);
+}
+
+.about:hover::after {
+  width: 200px;
+}
+
+/* About section container */
+.aboutdivide {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem auto;
+  max-width: 1400px; /* Increased from 1200px */
+  padding: 0 20px;
+  position: relative;
+  perspective: 1000px;
+}
+
+/* Image styling */
+.image2 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+
+.image2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(107, 70, 193, 0.2), rgba(128, 90, 213, 0.2));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image2:hover::before {
+  opacity: 1;
+}
+
+/* Image styling */
+.image2 img {
+  width: 35rem; /* Increased from 30rem */
+  height: 35rem; /* Increased from 30rem */
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+  filter: brightness(1);
+}
+
+.image2:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Text content styling */
+.written {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px; /* Increased padding */
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transform: translateZ(0);
+  transition: all 0.4s ease;
+  width: 35rem; /* Match image width */
+  line-height: 1.8; /* Better line spacing */
+}
+
+.written:hover {
+  transform: translateY(-10px) translateZ(20px);
+  box-shadow: 0 15px 35px rgba(31, 38, 135, 0.2);
+}
+
+/* Button container styling */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+/* Section buttons styling */
+.secbutton {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.8); /* Light background for better visibility */
+  border: 2px solid #6b46c1; /* Border color for light mode */
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  color: #000; /* Set text color to black for light mode */
+}
+
+.secbutton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(107, 70, 193, 0.2),
+      transparent
+  );
+  transition: all 0.5s ease;
+}
+
+.secbutton:hover::before {
+  left: 100%;
+}
+
+.secbutton.active {
+  border-color: #6b46c1; /* Keep the active border color */
+  color: #6b46c1; /* Keep the active text color */
+}
+
+/* Skillspart, Education, and CourseWork */
+.Skillspart {
+   margin-left: 20rem;
+}
+
+.Education {
+  margin-left: 30rem;
+}
+
+.CourseWork {
+  margin-left: 63rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about {
+      font-size: 2.5rem;
+      margin-top: 5rem;
+  }
+
+  .aboutdivide {
+      flex-direction: column;
+      gap: 30px;
+      margin: 2rem auto;
+  }
+
+  .image2 img {
+      width: 100%;
+      height: auto;
+      max-width: 300px;
+  }
+
+  .written {
+      padding: 20px;
+      font-size: 1rem;
+      text-align: center;
+  }
+
+  .button-container {
+      gap: 15px;
+  }
+
+  .secbutton {
+      padding: 10px 20px;
+      font-size: 0.7rem;
+  }
+  .Skillspart {
+    margin-left: 0rem;
+    font-size: 14px
+  }
+  .Education {
+    margin-left: 5rem;
+    font-size: 14px;
+  }
+  .CourseWork {
+    margin-left: 22rem;
+    font-size: 14px;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes floatAnimation {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Apply animations */
+.aboutdivide {
+  animation: fadeInUp 1s ease-out;
+}
+
+.image2 {
+  animation: floatAnimation 3s ease-in-out infinite;
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+  .written {
+      transform: none !important;
+  }
+
+  .secbutton::before {
+      display: none;
+  }
+
+  .secbutton:active {
+      background: rgba(107, 70, 193, 0.1);
+  }
+}
+
+/* Dark mode considerations */
+@media (prefers-color-scheme: dark) {
+  .written {
+      background: rgba(255, 255, 255, 0.03);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .secbutton {
+      background: transparent; /* Keep transparent background for dark mode */
+      color: #170202; /* White text for dark mode */
+      border: 2px solid #6b46c1;
+       /* Border color for light mode */
+  }
+
+  .secbutton.active {
+      border-color: #805ad5;
+      color: #805ad5;
+  }
+}

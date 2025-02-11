@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+
+body {
+    font-style: italic;
+    transition: all 0.3s ease;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Navbar Styling */
+.Navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.Navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 1rem 0;
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.Navbar ul li {
+    margin: 0 35px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.Navbar ul li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background: #6b46c1;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.Navbar ul li:hover::after {
+    width: 100%;
+}
+
+.Navbar ul li:hover {
+    transform: translateY(-2px);
+}
+
+.Navbar ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.Prashant {
+    text-align: center;
+    font-family: "Kanit", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 2.5rem;
+    margin-top: 6rem;
+    animation: fadeInDown 1s ease;
+}
+
+.description {
+    max-width: 60rem;
+    font-size: 1.8rem;
+    font-style: italic;
+    letter-spacing: 5px;
+    word-spacing: 20px;
+    margin: 2rem auto;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.5s;
+}
+
+/* Photo About Section */
+.photo_about {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
+    max-width: 1200px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 1s;
+}
+
+.image {
+    position: relative;
+    overflow: hidden;
+}
+
+.image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.image:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* CV Button */
+.CV-button {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.CVbutton {
+    padding: 15px 30px;
+    font-size: 17px;
+    background: linear-gradient(45deg, #6b46c1, #805ad5);
+    color: white;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.CVbutton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: all 0.5s ease;
+}
+
+.CVbutton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.CVbutton:hover::before {
+    left: 100%;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .Navbar {
+    background: rgba(18, 18, 18, 0.8);
+}
+
+body.dark-mode .CVbutton {
+    background: linear-gradient(45deg, #805ad5, #6b46c1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .photo_about {
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .description {
+        padding: 0 20px;
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+        word-spacing: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Navbar ul {
+        padding: 0.5rem 0;
+    }
+
+    .Navbar ul li {
+        margin: 0 15px;
+    }
+
+    .Navbar ul li a {
+        font-size: 1rem;
+    }
+
+    .Prashant {
+        font-size: 2rem;
+        margin-top: 4rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+        font-family: fantasy;
+        letter-spacing: 2px;
+        word-spacing: 5px;
+    }
+
+    .photo_about {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .CVbutton {
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .Navbar ul li::after {
+        display: none;
+    }
+
+    .CVbutton:active {
+        transform: scale(0.95);
+    }
+
+    .image:active img {
+        transform: scale(1.02);
+    }
+}
