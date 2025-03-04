@@ -114,6 +114,12 @@ body.dark-mode .card-container.active::after {
 
 
 
+/*Dark Mode styles for contact section*/
+body.dark-mode .Contact-section {
+  background: #121212;
+  color: #ffffff;
+}
+
 
 
 

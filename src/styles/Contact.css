@@ -1,6 +1,6 @@
 .Contact-section {
   padding: 40px;
-  background: linear-gradient(135deg, #f6f8fd 0%, #f1f4f9 100%);
+  background: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
