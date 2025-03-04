@@ -27,7 +27,7 @@ const Navbar = () => {
         <li><Link to="home" smooth={true} duration={500}>HOME</Link></li>
         <li><Link to="about" smooth={true} duration={500}>ABOUT</Link></li>
         <li><Link to="Project-section" smooth={true} duration={1100}>PROJECT</Link></li>
-        <li><Link to="/Contact">Contact</Link></li>
+        <li><Link to="Contact-section" smooth={true} duration={1100}>Contact</Link></li>
       </ul>
       <div className="switch" data-isOn={darkMode} onClick={toggleDarkMode}>
         <motion.div className="handle" layout transition={spring} />

@@ -22,3 +22,29 @@
 .Title-beyond:hover::after {
   width: 200px;
 }
+
+.beyond {
+    display:  flex;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+    background-color:rgb(255, 250, 250); /* Dark theme for a gaming vibe */
+  }
+  
+  .image-container {
+    perspective: 1000px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container img {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container:hover img {
+    transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+  }
+  

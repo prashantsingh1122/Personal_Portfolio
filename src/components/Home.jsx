@@ -6,10 +6,10 @@ import { LettersPullUp } from "./LettersPullup";
 import { ForHeading } from "./ForHeading";
 import CardSwitcher from "./CardSwitcher";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faGithub, 
-  faLinkedin, 
-  faThreads ,
+import {
+  faGithub,
+  faLinkedin,
+  faThreads,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -58,10 +58,10 @@ const Home = () => {
 
       {/* Action Buttons */}
 
-      
+
       <div className="CV-button">
-      
-        <button className="CVbutton" onClick={() => {window.open("https://drive.google.com/file/d/1PxfoBu3I8HbJeCZbhs9qcaUtPG607fgf/view?usp=sharing");}}>
+
+        <button className="CVbutton" onClick={() => { window.open("https://drive.google.com/file/d/1PxfoBu3I8HbJeCZbhs9qcaUtPG607fgf/view?usp=sharing"); }}>
           Download CV
         </button>
       </div>
@@ -155,55 +155,74 @@ const Home = () => {
 
       <div className="Project-section">
         <h1 className="Title-project">
-          <ForHeading text="PROJECTS"/></h1>
+          <ForHeading text="PROJECTS" /></h1>
         <CardSwitcher />
 
       </div>
 
-        {/* -----------------Contact----------------- */}
-        <div className="Contact-section">
-  <h1 className="Title">
-    <ForHeading text="CONTACT"/>
-  </h1>
-  
-    
-    {/* Keep your existing social-card section */}
-    <div className="contact-container" >
-    
-  <div className="social-links">
-    <a href="https://github.com/prashantsingh1122" className="social-link">
-      <FontAwesomeIcon icon={faGithub} />
-      
-    </a>
-    <a href="https://www.linkedin.com/in/prashant-singh-a40907271/" className="social-link">
-      <FontAwesomeIcon icon={faLinkedin} />
-      
-    </a>
-    <a href="https://www.threads.net/@_rajput__1122" className="social-link">
-    <FontAwesomeIcon icon={faThreads} />
-      
-    </a>
-    <a href="prashantsingh3517@gmail.com" className="social-link">
-      <FontAwesomeIcon icon={faEnvelope} />
-      
-    </a>
-    <a href="hhttps://www.instagram.com/_rajput__1122/" className="social-link">
-    <FontAwesomeIcon icon={faInstagram} />
-       
-      </a>
-  </div>
-  </div>
-</div>
+      {/* -----------------Contact----------------- */}
+      <div className="Contact-section">
+        <h1 className="Title">
+          <ForHeading text="CONTACT" />
+        </h1>
+
+
+        {/* Keep your existing social-card section */}
+        <div className="contact-container" >
+
+          <div className="social-links">
+            <a href="https://github.com/prashantsingh1122" className="social-link">
+              <FontAwesomeIcon icon={faGithub} />
+
+            </a>
+            <a href="https://www.linkedin.com/in/prashant-singh-a40907271/" className="social-link">
+              <FontAwesomeIcon icon={faLinkedin} />
+
+            </a>
+            <a href="https://www.threads.net/@_rajput__1122" className="social-link">
+              <FontAwesomeIcon icon={faThreads} />
+
+            </a>
+            <a href="prashantsingh3517@gmail.com" className="social-link">
+              <FontAwesomeIcon icon={faEnvelope} />
+
+            </a>
+            <a href="hhttps://www.instagram.com/_rajput__1122/" className="social-link">
+              <FontAwesomeIcon icon={faInstagram} />
+
+            </a>
+          </div>
+        </div>
+      </div>
 
 
 
-{/* -----------------BEYOND CODE----------------- */}
-<div className="Beyond-section">
-  <h1 className="Title-beyond">
-  <ForHeading text={"BEYOND CODE"} />
- </h1> 
-    
-  </div>
+      {/* -----------------BEYOND CODE----------------- */}
+      <div className="Beyond-section">
+        <h1 className="Title-beyond">
+          <ForHeading text={"BEYOND CODE"} />
+        </h1>
+        <h3 className="Beyond-description">
+          <LettersPullUp text="A bit of coder And a bit of a gamer, I love to play games in my free time.
+           I am a big fan of the Assassin's Creed series and the Witcher series. I also love to play games like Valorant, GTA V, and many more." />
+        </h3>
+        {/* for controller */}
+        <div className="beyond">
+          <div className="image-container">
+            <img src="/images/controller.jpeg" alt="Beyond Code" />
+          </div>
+
+          {/* TABLETENNIS */}
+
+          <div className="image-container">
+            <img src="/images/tt.jpeg" alt="Table Tennis" />
+          </div>
+          {/* BADMINTOn */}
+          <div className="image-container">
+            <img src="/images/badminton.jpeg" alt="Badminton" />
+            </div>
+        </div>
+      </div>
     </motion.div>
   );
 };
