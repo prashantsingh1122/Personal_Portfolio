@@ -12,6 +12,7 @@ import './styles/About.css'; // Adjust the path if needed
 import './styles/Project.css';
 import './components/DarkMode.css'; // Import Dark Mode styles as well
 import './styles/Contact.css';
+import './styles/Beyond.css';
 
 const App = () => {
   return (

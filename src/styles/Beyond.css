@@ -1,0 +1,24 @@
+.Title-beyond {
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top: 9rem;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.Title-beyond::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #6b46c1, #805ad5);
+  transition: all 0.5s ease;
+  transform: translateX(-50%);
+}
+.Title-beyond:hover::after {
+  width: 200px;
+}

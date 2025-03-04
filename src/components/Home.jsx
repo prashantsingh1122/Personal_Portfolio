@@ -9,7 +9,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faGithub, 
   faLinkedin, 
-  faTwitter 
+  faThreads ,
+  faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
@@ -153,7 +154,7 @@ const Home = () => {
       {/* -----------------Project----------------- */}
 
       <div className="Project-section">
-        <h1 className="Title">
+        <h1 className="Title-project">
           <ForHeading text="PROJECTS"/></h1>
         <CardSwitcher />
 
@@ -164,71 +165,45 @@ const Home = () => {
   <h1 className="Title">
     <ForHeading text="CONTACT"/>
   </h1>
-  <div className="contact-container">
-    <div className="contact-left">
-      <div className="modern-contact-card">
-        <h2>Contact Us</h2>
-        <form>
-          <div className="modern-form-group">
-            <label htmlFor="name">Your Name</label>
-            <input
-              type="text"
-              id="name"
-              placeholder="Enter your name"
-              required
-            />
-          </div>
-          <div className="modern-form-group">
-            <label htmlFor="email">Your Email</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
-          <div className="modern-form-group">
-            <label htmlFor="message">Your Message</label>
-            <textarea
-              id="message"
-              rows="4"
-              placeholder="Enter your message"
-              required
-            ></textarea>
-          </div>
-          <button type="submit" className="modern-submit-button">
-            Send Message
-          </button>
-        </form>
-      </div>
-    </div>
+  
     
     {/* Keep your existing social-card section */}
-    <div className="contact-right">
-    <div className="social-card">
-  <h2>Connect with me</h2>
+    <div className="contact-container" >
+    
   <div className="social-links">
     <a href="https://github.com/prashantsingh1122" className="social-link">
       <FontAwesomeIcon icon={faGithub} />
-      <span>GitHub</span>
+      
     </a>
     <a href="https://www.linkedin.com/in/prashant-singh-a40907271/" className="social-link">
       <FontAwesomeIcon icon={faLinkedin} />
-      <span>LinkedIn</span>
+      
     </a>
-    <a href="your-twitter-url" className="social-link">
-      <FontAwesomeIcon icon={faTwitter} />
-      <span>Twitter</span>
+    <a href="https://www.threads.net/@_rajput__1122" className="social-link">
+    <FontAwesomeIcon icon={faThreads} />
+      
     </a>
     <a href="prashantsingh3517@gmail.com" className="social-link">
       <FontAwesomeIcon icon={faEnvelope} />
-      <span>Email</span>
+      
     </a>
+    <a href="hhttps://www.instagram.com/_rajput__1122/" className="social-link">
+    <FontAwesomeIcon icon={faInstagram} />
+       
+      </a>
+  </div>
   </div>
 </div>
-    </div>
+
+
+
+{/* -----------------BEYOND CODE----------------- */}
+<div className="Beyond-section">
+  <h1 className="Title-beyond">
+  <ForHeading text={"BEYOND CODE"} />
+ </h1> 
+    
   </div>
-</div>
     </motion.div>
   );
 };

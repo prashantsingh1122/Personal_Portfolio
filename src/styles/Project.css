@@ -1,8 +1,27 @@
-.Title {
+
+.Title-project {
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-top: 9rem;
-    margin-left: 10%;
-    letter-spacing: 2px;
-}
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  /* Animated underline effect for Contact heading */
+  .Title-project::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #6b46c1, #805ad5);
+    transition: all 0.5s ease;
+    transform: translateX(-50%);
+  }
+  
+  .Title-project:hover::after {
+    width: 200px;
+  }

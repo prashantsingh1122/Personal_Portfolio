@@ -1,3 +1,4 @@
+/* Contact Section Styling */
 .Contact-section {
   padding: 40px;
   background: white;
@@ -9,95 +10,45 @@
   overflow: hidden;
 }
 
+/* Contact Heading Styling */
+.Title {
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top: 9rem;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Animated underline effect for Contact heading */
+.Title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #6b46c1, #805ad5);
+  transition: all 0.5s ease;
+  transform: translateX(-50%);
+}
+
+.Title:hover::after {
+  width: 200px;
+}
+
+
+
+
 .contact-container {
-  display: flex;
-  gap: 40px;
-  width: 100%;
-  max-width: 1200px;
-  margin-top: 30px;
-  padding: 0 20px;
-}
-
-.contact-left, 
-.contact-right {
-  flex: 1;
-}
-
-.modern-contact-card,
-.social-card {
-  background: linear-gradient(45deg,rgba(107, 112, 116, 0.06), #e9ecef);
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.modern-contact-card:hover,
-.social-card:hover {
-  transform: translateY(-5px);
-}
-
-.modern-contact-card h2,
-.social-card h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 1.5rem;
-}
-
-.modern-form-group {
-  margin-bottom: 1.5rem;
-}
-
-.modern-form-group label {
-  display: block;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-.modern-form-group input,
-.modern-form-group textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 2px solid #e1e1e1;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  background: white;
-}
-
-.modern-form-group input:focus,
-.modern-form-group textarea:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
-}
-
-.modern-submit-button {
-  width: 100%;
-  padding: 0.75rem;
-  background: linear-gradient(45deg, #007bff, #0056b3);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.modern-submit-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+  margin-top: 15rem;
 }
 
 .social-links {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-direction: ;
+  gap: 3rem;
 }
 
 .social-link {
@@ -105,7 +56,7 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.75rem;
-  border-radius: 8px;
+  border-radius: 200px;
   text-decoration: none;
   color: #333;
   background: #f8f9fa;
