@@ -19,6 +19,11 @@ const Contact = () => {
         <textarea placeholder="Your message"></textarea>
         <button type="submit">Send</button>
       </form>
+      <div className="github-link">
+        <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">
+          Visit my GitHub
+        </a>
+      </div>
     </motion.div>
   );
 };

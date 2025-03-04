@@ -208,11 +208,11 @@ const Home = () => {
     <div className="social-card">
   <h2>Connect with me</h2>
   <div className="social-links">
-    <a href="your-github-url" className="social-link">
+    <a href="https://github.com/prashantsingh1122" className="social-link">
       <FontAwesomeIcon icon={faGithub} />
       <span>GitHub</span>
     </a>
-    <a href="your-linkedin-url" className="social-link">
+    <a href="https://www.linkedin.com/in/prashant-singh-a40907271/" className="social-link">
       <FontAwesomeIcon icon={faLinkedin} />
       <span>LinkedIn</span>
     </a>
@@ -220,7 +220,7 @@ const Home = () => {
       <FontAwesomeIcon icon={faTwitter} />
       <span>Twitter</span>
     </a>
-    <a href="mailto:your-email@example.com" className="social-link">
+    <a href="prashantsingh3517@gmail.com" className="social-link">
       <FontAwesomeIcon icon={faEnvelope} />
       <span>Email</span>
     </a>
