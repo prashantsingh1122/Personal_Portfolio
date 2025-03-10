@@ -5,6 +5,7 @@ import { RotateWords } from "./Rotatewords"; // Adjust the path as necessary
 import { LettersPullUp } from "./LettersPullup";
 import { ForHeading } from "./ForHeading";
 import CardSwitcher from "./CardSwitcher";
+import  TiltedCard  from "./TiltedCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
@@ -207,21 +208,24 @@ const Home = () => {
            I am a big fan of the Assassin's Creed series and the Witcher series. I also love to play games like Valorant, GTA V, and many more." />
         </h3>
         {/* for controller */}
-        <div className="beyond">
-          <div className="image-container">
-            <img src="/images/controller.jpeg" alt="Beyond Code" />
-          </div>
-
-          {/* TABLETENNIS */}
-
-          <div className="image-container">
-            <img src="/images/tt.jpeg" alt="Table Tennis" />
-          </div>
-          {/* BADMINTOn */}
-          <div className="image-container">
-            <img src="/images/badminton.jpeg" alt="Badminton" />
-            </div>
-        </div>
+        
+      
+      <TiltedCard
+        imageSrc="/images/controller.jpeg"
+        containerHeight="300px"
+        containerWidth="300px"
+        imageHeight="300px"
+        imageWidth="300px"
+        marginLeft="20px"
+        rotateSensitivity={50}
+        rotateAmplitude={20}
+        scaleOnHover={1.1}
+        showMobileWarning={false}
+        showTooltip={true}
+        displayOverlayContent={true}
+         
+        
+      />
       </div>
     </motion.div>
   );
