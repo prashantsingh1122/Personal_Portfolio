@@ -5,7 +5,7 @@ import { RotateWords } from "./Rotatewords"; // Adjust the path as necessary
 import { LettersPullUp } from "./LettersPullup";
 import { ForHeading } from "./ForHeading";
 import CardSwitcher from "./CardSwitcher";
-import  TiltedCard  from "./TiltedCard";
+import TiltedCard from "./TiltedCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
@@ -28,6 +28,26 @@ const Home = () => {
   const handleSectionClick = (section) => {
     setActiveSection(section);
   };
+  const tiltedCardData = [
+    {
+      imageSrc: "/images/controller.jpeg",
+      altText: "Controller",
+      captionText: "Gaming Controller",
+      description: "A bit of coder And a bit of a gamer, I love to play games in my free time. I am a big fan of the Assassin's Creed series and the Witcher series. I also love to play games like Valorant, GTA V, and many more."
+    },
+    {
+      imageSrc: "/images/tt.jpeg",
+      altText: "Table Tennis",
+      captionText: "Table Tennis",
+      description: "I enjoy playing table tennis during my leisure time. It's a great way to stay active and have fun with friends."
+    },
+    {
+      imageSrc: "/images/badminton.jpeg",
+      altText: "Badminton",
+      captionText: "Badminton",
+      description: "Badminton is another sport I love. It helps me stay fit and improves my reflexes."
+    },
+  ];
 
   return (
     <motion.div
@@ -199,34 +219,41 @@ const Home = () => {
 
 
       {/* -----------------BEYOND CODE----------------- */}
-      <div className="Beyond-section">
-        <h1 className="Title-beyond">
-          <ForHeading text={"BEYOND CODE"} />
-        </h1>
-        <h3 className="Beyond-description">
-          <LettersPullUp text="A bit of coder And a bit of a gamer, I love to play games in my free time.
-           I am a big fan of the Assassin's Creed series and the Witcher series. I also love to play games like Valorant, GTA V, and many more." />
-        </h3>
-        {/* for controller */}
-        
       
-      <TiltedCard
-        imageSrc="/images/controller.jpeg"
-        containerHeight="300px"
-        containerWidth="300px"
-        imageHeight="300px"
-        imageWidth="300px"
-        marginLeft="20px"
-        rotateSensitivity={50}
-        rotateAmplitude={20}
-        scaleOnHover={1.1}
-        showMobileWarning={false}
-        showTooltip={true}
-        displayOverlayContent={true}
-         
-        
-      />
-      </div>
+        <div className="Beyond-section">
+          <h1 className="Title-beyond">
+            <ForHeading text={"BEYOND CODE"} />
+          </h1>
+          <div className="beyond-cards">
+            {tiltedCardData.map((data, index) => (
+              <div className="beyond-card" key={index}>
+                <TiltedCard
+                  imageSrc={data.imageSrc}
+                  altText={data.altText}
+                  captionText={data.captionText}
+                  containerHeight="300px"
+                  containerWidth="300px"
+                  imageHeight="300px"
+                  imageWidth="300px"
+                  rotateAmplitude={12}
+                  scaleOnHover={1.2}
+                  showMobileWarning={false}
+                  showTooltip={true}
+                  displayOverlayContent={true}
+                  overlayContent={
+                    <p className="tilted-card-demo-text">
+                      {data.captionText}
+                    </p>
+                  }
+                />
+                <div className="beyond-description">
+                  <p>{data.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
     </motion.div>
   );
 };
