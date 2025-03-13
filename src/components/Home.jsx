@@ -50,33 +50,33 @@ const Home = () => {
     },
   ];
   //  FOR SKILLS PART    -----------note: you'll need to make sure the parent container of this component is sized properly  
-const items = [
-  'Item 1',
-  <div key='jsx-item-1'>Custom JSX Content</div>,
-  'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'Item 2',
-  <div key='jsx-item-2'>Custom JSX Content</div>,
-  'Item 4',
-  <div key='jsx-item-2'>Custom JSX Content</div>,
-  'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'Item 5',
-  <div key='jsx-item-2'>Custom JSX Content</div>,
-  'Item 7',
-  <div key='jsx-item-2'>Custom JSX Content</div>,
-  'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'Item 8',
-  <div key='jsx-item-2'>Custom JSX Content</div>,
-  'Item 10',
-  <div key='jsx-item-3'>Custom JSX Content</div>,
-  'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'Item 11',
-  <div key='jsx-item-2'>Custom JSX Content</div>,
-  'Item 13',
-  <div key='jsx-item-4'>Custom JSX Content</div>,
-  'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'Item 14',
-  // Add more items as needed
-];
+  const items = [
+    'Item 1',
+    <div key='jsx-item-1'>Custom JSX Content</div>,
+    'https://www.patterns.dev/img/reactjs/react-logo@3x.svg',
+    'Item 2',
+    <div key='jsx-item-2'>Custom JSX Content</div>,
+    'Item 4',
+    <div key='jsx-item-2'>Custom JSX Content</div>,
+    'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'Item 5',
+    <div key='jsx-item-2'>Custom JSX Content</div>,
+    'Item 7',
+    <div key='jsx-item-2'>Custom JSX Content</div>,
+    'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'Item 8',
+    <div key='jsx-item-2'>Custom JSX Content</div>,
+    'Item 10',
+    <div key='jsx-item-3'>Custom JSX Content</div>,
+    'https://www.patterns.dev/img/reactjs/react-logo@3x.svg',
+
+    <div key='jsx-item-2'>Custom JSX Content</div>,
+    'Item 13',
+    <div key='jsx-item-4'>Custom JSX Content</div>,
+    'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'Item 14',
+    // Add more items as needed
+  ];
 
   return (
     <motion.div
@@ -134,7 +134,10 @@ const items = [
         </div>
       </div>
       {/* Action Buttons */}
-      <div className="button-container">
+
+
+
+      {/*<div className="button-container">
         <button className={`secbutton ${activeSection === "skills" ? "active" : ""}`} onClick={() => handleSectionClick("skills")}>
           <ForHeading text="SKILLS" />
         </button>
@@ -147,10 +150,19 @@ const items = [
         <button className={`secbutton ${activeSection === "coursework" ? "active" : ""}`} onClick={() => handleSectionClick("coursework")}>
           <ForHeading text="COURSE WORK" />
         </button>
+      </div>        /*}
+
+
+      {/* GridMotion Component */}
+      <div >
+
+
+        <GridMotion items={items} />
+
       </div>
 
       {/* Buttons to Select Sections */}
-      <div className="aboutmeother">
+      {/* <div className="aboutmeother">
         {activeSection === "skills" && (
           <div className="Skillspart">
             <ul>
@@ -198,7 +210,7 @@ const items = [
         <div className="image2">
 
         </div>
-      </div>
+      </div>    */}
 
 
       {/* -----------------Project----------------- */}
@@ -248,43 +260,41 @@ const items = [
 
 
       {/* -----------------BEYOND CODE----------------- */}
-      
-        <div className="Beyond-section">
-          <h1 className="Title-beyond">
-            <ForHeading text={"BEYOND CODE"} />
-          </h1>
-          <div className="beyond-cards">
-            {tiltedCardData.map((data, index) => (
-              <div className="beyond-card" key={index}>
-                <TiltedCard
-                  imageSrc={data.imageSrc}
-                  altText={data.altText}
-                  captionText={data.captionText}
-                  containerHeight="300px"
-                  containerWidth="300px"
-                  imageHeight="300px"
-                  imageWidth="300px"
-                  rotateAmplitude={12}
-                  scaleOnHover={1.2}
-                  showMobileWarning={false}
-                  showTooltip={true}
-                  displayOverlayContent={true}
-                  overlayContent={
-                    <p className="tilted-card-demo-text">
-                      {data.captionText}
-                    </p>
-                  }
-                />
-                <div className="beyond-description">
-                  <p>{data.description}</p>
-                </div>
+
+      <div className="Beyond-section">
+        <h1 className="Title-beyond">
+          <ForHeading text={"BEYOND CODE"} />
+        </h1>
+        <div className="beyond-cards">
+          {tiltedCardData.map((data, index) => (
+            <div className="beyond-card" key={index}>
+              <TiltedCard
+                imageSrc={data.imageSrc}
+                altText={data.altText}
+                captionText={data.captionText}
+                containerHeight="300px"
+                containerWidth="300px"
+                imageHeight="300px"
+                imageWidth="300px"
+                rotateAmplitude={12}
+                scaleOnHover={1.2}
+                showMobileWarning={false}
+                showTooltip={true}
+                displayOverlayContent={true}
+                overlayContent={
+                  <p className="tilted-card-demo-text">
+                    {data.captionText}
+                  </p>
+                }
+              />
+              <div className="beyond-description">
+                <p>{data.description}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-        <div>
-        <GridMotion items={items} />
-        </div>
+      </div>
+
 
     </motion.div>
   );
