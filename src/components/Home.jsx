@@ -52,34 +52,40 @@ const Home = () => {
   //  FOR SKILLS PART    -----------note: you'll need to make sure the parent container of this component is sized properly  
   const items = [
     'Item 1',
-    <div key='jsx-item-1'>Custom JSX Content</div>,
+    <div key='jsx-item-1'></div>,
     'https://www.patterns.dev/img/reactjs/react-logo@3x.svg',
     'Item 2',
-    <div key='jsx-item-2'>Custom JSX Content</div>, 
+    <div key='jsx-item-2'>OS</div>, 
     'Item 4',
     <div key='jsx-item-2'>HTML</div>,
-    'Item 5',
-    'https://verpex.com/assets/uploads/images/blog/Basic-HTML-Codes-for-Websites.webp?v=1691760654',
-    
+    'Item 5',    
     <div key='jsx-item-2'>CSS</div>,
+    'https://verpex.com/assets/uploads/images/blog/Basic-HTML-Codes-for-Websites.webp?v=1691760654',
     'https://wpengine.com/wp-content/uploads/2021/07/jsheader.png',
     'https://devonblog.com/wp-content/uploads/2022/06/tailwind-thumb.jpg',
-    'https://www.openlogic.com/sites/default/files/image/2021-06/image-blog-openlogic-what-is-mongodb.png',
+    'https://b2084911.smushcdn.com/2084911/wp-content/uploads/2016/08/nodejs-modules-webentwicklung-webdevelopment-webpunks.jpg?lossy=0&strip=1&webp=1',
 
     'Item 7',
     <div key='jsx-item-2'>Custom JSX Content</div>,
     'https://notes.edureify.com/wp-content/uploads/2024/10/python3.png',
-    'Item 8',
+    'https://www.openlogic.com/sites/default/files/image/2021-06/image-blog-openlogic-what-is-mongodb.png',
+    'https://www.orientsoftware.com/Themes/Content/Images/blog/2024-09-23/cplusplus-usage-os.webp',
+    'https://www.patterns.dev/img/reactjs/react-logo@3x.svg',
     <div key='jsx-item-2'>Custom JSX Content</div>,
     'Item 10',
-    <div key='jsx-item-3'>Custom JSX Content</div>,
+    <div key='jsx-item-3'></div>,
     'https://www.patterns.dev/img/reactjs/react-logo@3x.svg',
 
     <div key='jsx-item-2'>Custom JSX Content</div>,
-    'Item 13',
-    <div key='jsx-item-4'>Custom JSX Content</div>,
-    'https://verpex.com/assets/uploads/images/blog/Basic-HTML-Codes-for-Websites.webp?v=1691760654',
-    'Item 14',
+    'https://b2084911.smushcdn.com/2084911/wp-content/uploads/2016/08/nodejs-modules-webentwicklung-webdevelopment-webpunks.jpg?lossy=0&strip=1&webp=1',
+
+    'https://devonblog.com/wp-content/uploads/2022/06/tailwind-thumb.jpg',
+
+    
+    
+    'https://wpengine.com/wp-content/uploads/2021/07/jsheader.png',
+    
+   
     // Add more items as needed
   ];
 
