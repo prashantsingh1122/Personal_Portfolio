@@ -55,15 +55,20 @@ const Home = () => {
     <div key='jsx-item-1'>Custom JSX Content</div>,
     'https://www.patterns.dev/img/reactjs/react-logo@3x.svg',
     'Item 2',
-    <div key='jsx-item-2'>Custom JSX Content</div>,
+    <div key='jsx-item-2'>Custom JSX Content</div>, 
     'Item 4',
-    <div key='jsx-item-2'>Custom JSX Content</div>,
-    'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    <div key='jsx-item-2'>HTML</div>,
     'Item 5',
-    <div key='jsx-item-2'>Custom JSX Content</div>,
+    'https://verpex.com/assets/uploads/images/blog/Basic-HTML-Codes-for-Websites.webp?v=1691760654',
+    
+    <div key='jsx-item-2'>CSS</div>,
+    'https://wpengine.com/wp-content/uploads/2021/07/jsheader.png',
+    'https://devonblog.com/wp-content/uploads/2022/06/tailwind-thumb.jpg',
+    'https://www.openlogic.com/sites/default/files/image/2021-06/image-blog-openlogic-what-is-mongodb.png',
+
     'Item 7',
     <div key='jsx-item-2'>Custom JSX Content</div>,
-    'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://notes.edureify.com/wp-content/uploads/2024/10/python3.png',
     'Item 8',
     <div key='jsx-item-2'>Custom JSX Content</div>,
     'Item 10',
@@ -73,7 +78,7 @@ const Home = () => {
     <div key='jsx-item-2'>Custom JSX Content</div>,
     'Item 13',
     <div key='jsx-item-4'>Custom JSX Content</div>,
-    'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://verpex.com/assets/uploads/images/blog/Basic-HTML-Codes-for-Websites.webp?v=1691760654',
     'Item 14',
     // Add more items as needed
   ];
@@ -225,7 +230,7 @@ const Home = () => {
       {/* -----------------Contact----------------- */}
       <div className="Contact-section">
         <h1 className="Title">
-          <ForHeading text="CONTACT" />
+          <ForHeading text="CONTACT" /> 
         </h1>
 
 
