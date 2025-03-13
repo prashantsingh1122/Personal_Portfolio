@@ -7,6 +7,7 @@ import { ForHeading } from "./ForHeading";
 import CardSwitcher from "./CardSwitcher";
 import TiltedCard from "./TiltedCard";
 import GridMotion from "./GridMotion";
+import Aurora from "./Aurora";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
@@ -55,10 +56,10 @@ const Home = () => {
     <div key='jsx-item-1'></div>,
     'https://www.patterns.dev/img/reactjs/react-logo@3x.svg',
     'https://media.wired.com/photos/66425c483aeee12d6ca99835/master/w_1920,c_limit/New-ChatGPT-Tier-Gear-GettyImages-2151457871.jpg ',
-    <div key='jsx-item-2'>OS</div>, 
+    <div key='jsx-item-2'>OS</div>,
     'Item 4',
     <div key='jsx-item-2'>HTML</div>,
-    'Item 5',    
+    'Item 5',
     <div key='jsx-item-2'>CSS</div>,
     'https://verpex.com/assets/uploads/images/blog/Basic-HTML-Codes-for-Websites.webp?v=1691760654',
     'https://wpengine.com/wp-content/uploads/2021/07/jsheader.png',
@@ -82,11 +83,11 @@ const Home = () => {
 
     'https://devonblog.com/wp-content/uploads/2022/06/tailwind-thumb.jpg',
 
-    
-    
+
+
     'https://wpengine.com/wp-content/uploads/2021/07/jsheader.png',
-    
-   
+
+
     // Add more items as needed
   ];
 
@@ -98,7 +99,12 @@ const Home = () => {
       transition={{ duration: 1 }}
     >
       {/* Animated greeting using RotateWords */}
-      
+      <Aurora
+        colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+        blend={0.5}
+        amplitude={1.0}
+        speed={0.5}
+      />
       <div className="Prashant">
         <RotateWords
           text="Hi, I'm"
@@ -238,49 +244,49 @@ const Home = () => {
       {/* -----------------Contact----------------- */}
       <div className="Contact-section">
         <h1 className="Title">
-          <ForHeading text="CONTACT" /> 
+          <ForHeading text="CONTACT" />
         </h1>
 
 
         {/* Keep your existing social-card section */}
-        
-      <div className="wrapper">
-        <div className="icon github">
-          <a href="https://github.com/prashantsingh1122" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-          <span className="tooltip">GitHub</span>
-        </div>
-        
-        <div className="icon linkedin">
-          <a href="https://www.linkedin.com/in/prashant-singh-a40907271/" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-          <span className="tooltip">LinkedIn</span>
-        </div>
 
-        <div className="icon twitter">
-          <a href="https://www.threads.net/@_rajput__1122" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faThreads} />
-          </a>
-          <span className="tooltip">Threads</span>
-        </div>
+        <div className="wrapper">
+          <div className="icon github">
+            <a href="https://github.com/prashantsingh1122" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <span className="tooltip">GitHub</span>
+          </div>
 
-        <div className="icon email">
-          <a href="mailto:prashantsingh3517@gmail.com">
-            <FontAwesomeIcon icon={faEnvelope} />
-          </a>
-          <span className="tooltip">Email</span>
-        </div>
+          <div className="icon linkedin">
+            <a href="https://www.linkedin.com/in/prashant-singh-a40907271/" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+            <span className="tooltip">LinkedIn</span>
+          </div>
 
-        <div className="icon instagram">
-          <a href="https://www.instagram.com/_rajput__1122/" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faInstagram} />
-          </a>
-          <span className="tooltip">Instagram</span>
+          <div className="icon twitter">
+            <a href="https://www.threads.net/@_rajput__1122" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faThreads} />
+            </a>
+            <span className="tooltip">Threads</span>
+          </div>
+
+          <div className="icon email">
+            <a href="mailto:prashantsingh3517@gmail.com">
+              <FontAwesomeIcon icon={faEnvelope} />
+            </a>
+            <span className="tooltip">Email</span>
+          </div>
+
+          <div className="icon instagram">
+            <a href="https://www.instagram.com/_rajput__1122/" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <span className="tooltip">Instagram</span>
+          </div>
         </div>
       </div>
-    </div>
 
 
 
