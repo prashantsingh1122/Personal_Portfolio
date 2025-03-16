@@ -159,6 +159,13 @@
   color: #fff;
 }
 
+.wrapper .email:hover,
+.wrapper .email:hover .tooltip,
+.wrapper .email:hover .tooltip::before {
+  background:rgb(52, 50, 58);
+  color: #fff;
+}
+
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
