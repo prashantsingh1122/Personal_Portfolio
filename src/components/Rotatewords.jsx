@@ -1,7 +1,15 @@
-// RotateWords.jsx
+
 "use client"
 import * as React from "react"
 import { AnimatePresence, motion } from "framer-motion"
+import "./Rotatewords.css";
+const TestComponent = () => {
+  return (
+    <div className="test-container">
+      <p className="gradient-text">Test Gradient Text</p>
+    </div>
+  );
+};
 
 export function RotateWords({
   text = "Rotate",
@@ -27,6 +35,7 @@ export function RotateWords({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 40 }}
           transition={{ duration: 0.8 }}
+          className="gradient-text"
         >
           {words[index]}
         </motion.p>

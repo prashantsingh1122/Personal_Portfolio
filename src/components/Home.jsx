@@ -39,7 +39,7 @@ const Home = () => {
     },
     {
       imageSrc: "/images/tt.jpeg",
-      altText: "Table Tennis",
+      altText: "Table  Tennis",
       captionText: "Table Tennis",
       description: "I enjoy playing table tennis during my leisure time. It's a great way to stay active and have fun with friends."
     },

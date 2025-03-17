@@ -13,6 +13,7 @@ import './styles/Project.css';
 import './components/DarkMode.css'; // Import Dark Mode styles as well
 import './styles/Contact.css';
 import './styles/Beyond.css';
+import './components/Rotatewords.css';
 
 const App = () => {
   return (
